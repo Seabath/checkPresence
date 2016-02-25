@@ -8,12 +8,13 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import com.seabath.axu614.checkPresence.R
-import com.seabath.axu614.checkPresence.classe.EleveClass
+import com.seabath.axu614.checkPresence.activity.MainActivity
+import com.seabath.axu614.checkPresence.classe.StudentClass
 import java.util.*
 
-class EleveListAdapter(context: Context, tabNav: ArrayList<EleveClass>) : BaseAdapter() {
+class StudentListAdapter(context: Context, tabNav: ArrayList<StudentClass>) : BaseAdapter() {
 
-    internal var sList : ArrayList<EleveClass>
+    internal var sList : ArrayList<StudentClass> = MainActivity.Foo.mListStudent
     private val mInflator: LayoutInflater
 
     init {
@@ -25,7 +26,7 @@ class EleveListAdapter(context: Context, tabNav: ArrayList<EleveClass>) : BaseAd
         return sList.size
     }
 
-    override fun getItem(position: Int): EleveClass {
+    override fun getItem(position: Int): StudentClass {
         return sList[position]
     }
 
@@ -38,15 +39,15 @@ class EleveListAdapter(context: Context, tabNav: ArrayList<EleveClass>) : BaseAd
         val vh: ListRowHolder
 
         if (convertView == null) {
-            view = this.mInflator.inflate(R.layout.unicorn_item, parent, false)
+            view = this.mInflator.inflate(R.layout.student_item, parent, false)
             vh = ListRowHolder(view)
             view!!.tag = vh
         } else {
             view = convertView
             vh = view.tag as ListRowHolder
         }
-        vh.firstLine.text = sList[position].name
-        vh.secondLine.text = sList[position].location
+        vh.firstLine.text = sList[position].mName + " " + sList[position].mFirstName
+        vh.secondLine.text = "" + sList[position].mUID
         return view
     }
 
@@ -56,9 +57,9 @@ class EleveListAdapter(context: Context, tabNav: ArrayList<EleveClass>) : BaseAd
         val image: ImageView
 
         init {
-            this.firstLine = row?.findViewById(R.id.firstLine_unicorn) as TextView
-            this.secondLine = row?.findViewById(R.id.secondLine_unicorn) as TextView
-            this.image= row?.findViewById(R.id.icon_unicorn) as ImageView
+            this.firstLine = row?.findViewById(R.id.firstLine_student) as TextView
+            this.secondLine = row?.findViewById(R.id.secondLine_student) as TextView
+            this.image= row?.findViewById(R.id.icon_student) as ImageView
         }
     }
 

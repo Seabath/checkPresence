@@ -19,7 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.seabath.axu614.checkPresence.activity.ListEleveActivity" />
+        <activity android:name="com.seabath.axu614.checkPresence.activity.ListStudentActivity" />
     </application>
 
 </manifest>

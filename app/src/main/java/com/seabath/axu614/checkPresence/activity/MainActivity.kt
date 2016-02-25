@@ -9,10 +9,15 @@ import android.view.Menu
 import android.view.MenuItem
 import com.firebase.client.Firebase
 import com.seabath.axu614.checkPresence.R
-import com.seabath.axu614.checkPresence.classe.EleveClass
-import com.seabath.axu614.checkPresence.dialog.AddUnicornDialog
+import com.seabath.axu614.checkPresence.classe.StudentClass
+import com.seabath.axu614.checkPresence.dialog.AddStudentDialog
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
+
+    object Foo{
+        var mListStudent : ArrayList<StudentClass> = ArrayList()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,16 +37,13 @@ class MainActivity : AppCompatActivity() {
         val id = item.itemId
 
         when (id) {
-            R.id.action_settings -> {
-                var uni : EleveClass? = null;
-                uni?.doNullPointerException()
-            }
+            R.id.action_settings -> {}
             R.id.action_show_list -> {
-                val intent = Intent(baseContext, ListEleveActivity::class.java)
+                val intent = Intent(baseContext, ListStudentActivity::class.java)
                 startActivity(intent)
             }
-            R.id.action_add_unicorn -> {
-                var blo = AddUnicornDialog(this)
+            R.id.action_add_student -> {
+                var blo = AddStudentDialog(this)
                 blo.show()
             }
             else -> Log.e("ERROR OPTION", "dafuk?")

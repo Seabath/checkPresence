@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <EditText
-        android:id="@+id/unicorn_name"
+        android:id="@+id/student_name"
         android:inputType="textPersonName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -12,9 +12,9 @@
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
         android:layout_marginBottom="4dp"
-        android:hint="@string/unicorn_name" />
+        android:hint="@string/student_name" />
     <EditText
-        android:id="@+id/unicorn_location"
+        android:id="@+id/student_firstname"
         android:inputType="textPersonName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
         android:layout_marginRight="4dp"
         android:layout_marginBottom="16dp"
         android:fontFamily="sans-serif"
-        android:hint="@string/unicorn_location"/>
+        android:hint="@string/student_firstname"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

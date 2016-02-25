@@ -5,9 +5,8 @@
     <string name="ok">OK</string>
     <string name="action_settings">Settings</string>
     <string name="action_show_list">Show List</string>
-    <string name="action_add_unicorn">Add Unicorn</string>
-    <string name="unicorn_name">Unicorn Name</string>
-    <string name="unicorn_location">Unicorn Location</string>
+    <string name="action_add_student">Add Student</string>
+    <string name="student_name">Name</string>
+    <string name="student_firstname">First Name</string>
     <string name="cancel">Cancel</string>
-    <string name="table_unicorn">licornes</string>
 </resources>
