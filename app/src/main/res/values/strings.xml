@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">checkPresence</string>
+    <string name="welcome_message">Welcome to this new Application Containing UNICORNS</string>
+    <string name="instruction_message">Swipe from left to right to see the drawer of this wonderful application</string>
+    <string name="ok">OK</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_show_list">Show List</string>
+    <string name="action_add_unicorn">Add Unicorn</string>
+    <string name="unicorn_name">Unicorn Name</string>
+    <string name="unicorn_location">Unicorn Location</string>
+    <string name="cancel">Cancel</string>
+    <string name="table_unicorn">licornes</string>
+</resources>
