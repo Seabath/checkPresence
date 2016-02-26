@@ -5,6 +5,7 @@ import android.content.Context
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import com.seabath.axu614.checkPresence.R
 import com.seabath.axu614.checkPresence.activity.MainActivity
 import com.seabath.axu614.checkPresence.classe.StudentClass
@@ -20,9 +21,14 @@ class AddStudentDialog(context: Context) : Dialog(context) {
         setTitle(R.string.action_add_student);
 
         buttonOk.setOnClickListener({
-            val name : String = (findViewById(R.id.student_name) as TextView).text.toString()
-            val firstname : String = (findViewById(R.id.student_firstname) as TextView).text.toString()
-            MainActivity.Foo.mListStudent.add(StudentClass(name, firstname, 1000))
+            val name : TextView = findViewById(R.id.student_name) as TextView
+            val firstname : TextView = findViewById(R.id.student_firstname) as TextView
+            val uid : TextView = findViewById(R.id.student_uid) as TextView
+            MainActivity.Foo.mListStudent.add(StudentClass(name.text.toString(), firstname.text.toString(), uid.text.toString().toInt()))
+            Toast.makeText(context, "Student added", Toast.LENGTH_LONG).show()
+            name.text = ""
+            firstname.text = ""
+            uid.text = ""
         })
 
         buttonCancel.setOnClickListener({ this.cancel() })
